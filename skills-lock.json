@@ -30,6 +30,12 @@
       "sourceType": "github",
       "skillPath": "skills/typescript-best-practices/SKILL.md",
       "computedHash": "fb35e49d1b6a48fa42d81fff0e4e9834b8f98e0ebcf188203680f1f4265df690"
+    },
+    "unit-testing": {
+      "source": "petrkindlmann/qa-skills",
+      "sourceType": "github",
+      "skillPath": "skills/unit-testing/SKILL.md",
+      "computedHash": "5e20433f5aa1018d9283a761c6ffefa63dc771d9aa9d6fb16f01dcdfcee4c067"
     }
   }
 }
