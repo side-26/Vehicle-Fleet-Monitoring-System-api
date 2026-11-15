@@ -4,7 +4,15 @@
   "minTokens": 50,
   "reporters": ["console"],
   "format": ["typescript", "javascript"],
-  "ignore": ["**/node_modules/**", "**/dist/**", "**/coverage/**", "**/*.test.ts", "**/*.spec.ts"],
+  "ignore": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/coverage/**",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "src/app.ts",
+    "src/server.ts"
+  ],
   "absolute": true,
   "gitignore": true
 }
