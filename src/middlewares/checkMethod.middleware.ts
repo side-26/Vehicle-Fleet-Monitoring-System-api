@@ -1,22 +1,12 @@
 import type { RequestHandler } from 'express';
 
-import { STATUS_CODES } from '#/configs/constants';
+import { HTTP_METHODS, STATUS_CODES } from '#/configs/constants';
 import { setErrorResponse } from '#/utils/helpers';
 
-export const supportedMethods = [
-  'GET',
-  'POST',
-  'PUT',
-  'PATCH',
-  'DELETE',
-  'OPTIONS',
-  'HEAD',
-] as const;
-
-export type SupportedMethod = (typeof supportedMethods)[number];
+export type SupportedMethod = (typeof HTTP_METHODS)[number];
 
 export const checkMethodMiddleware: RequestHandler = (request, _response, next) => {
-  if (supportedMethods.some((method) => method === request.method)) {
+  if (HTTP_METHODS.some((method) => method === request.method)) {
     next();
     return;
   }
