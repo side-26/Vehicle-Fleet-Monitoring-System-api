@@ -1,0 +1,58 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build output
+dist
+build
+**/*.tsbuildinfo
+
+# Git
+.git
+.gitignore
+
+# Environment variables
+.env
+.env.*
+
+# Development tools
+.husky
+.vscode
+.idea
+
+# Testing
+coverage
+.vitest
+**/*.test.ts
+**/*.spec.ts
+
+# Logs
+logs
+**/*.log
+
+# Cache and temporary files
+.cache
+.tmp
+tmp
+temp
+
+# Local database storage
+data
+dump.rdb
+appendonly.aof
+appendonlydir
+
+# Operating system
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# Certificates and private keys
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+
+# Documentation
+README.md
+docs

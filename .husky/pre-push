@@ -1,0 +1,4 @@
+pnpm format:check
+pnpm lint --deny-warnings
+pnpm typecheck
+pnpm test

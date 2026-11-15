@@ -1,0 +1,4 @@
+{
+  "*.{js,mjs,cjs,ts,mts,cts}": ["oxlint --fix --deny-warnings", "oxfmt --write"],
+  "*.{json,jsonc,yaml,yml,md}": ["oxfmt --write"]
+}
