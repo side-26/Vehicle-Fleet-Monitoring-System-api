@@ -9,13 +9,14 @@ describe('health check endpoints', () => {
   it('reports liveness', async () => {
     const response = await request(app).get('/api/health-checks/live');
     expect(response.status).toBe(STATUS_CODES.OK);
-    expect(response.body.status).toBe('healthy');
+    expect(response.body.data.status).toBe('healthy');
   });
 
   it('reports dependency readiness and startup state', async () => {
     const readiness = await request(app).get('/api/health-checks/ready');
     expect([STATUS_CODES.OK, STATUS_CODES.SERVICE_UNAVAILABLE]).toContain(readiness.status);
-    expect(readiness.body.checks).toEqual(
+    const readinessChecks = readiness.body.data?.checks ?? readiness.body.data?.details;
+    expect(readinessChecks).toEqual(
       expect.objectContaining({ mongodb: expect.any(String), redis: expect.any(String) }),
     );
 
