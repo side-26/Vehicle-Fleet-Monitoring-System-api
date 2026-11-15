@@ -1,6 +1,17 @@
 {
   "$schema": "https://unpkg.com/knip/schema.json",
-  "entry": ["src/server.ts"],
   "project": ["src/**/*.ts"],
-  "ignoreFiles": ["src/app.ts", "src/server.ts"]
+  "ignoreFiles": ["src/app.ts"],
+  "rules": {
+    "dependencies": "warn",
+    "devDependencies": "warn",
+    "subpaths": "warn",
+    "files": "error",
+    "exports": "error",
+    "types": "error",
+    "unlisted": "error",
+    "binaries": "error",
+    "unresolved": "error",
+    "duplicates": "error"
+  }
 }
