@@ -6,6 +6,7 @@ export default defineConfig({
     include: ['tests/**/*.test.ts'],
     clearMocks: true,
     restoreMocks: true,
+    passWithNoTests: true,
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html', 'lcov'],
