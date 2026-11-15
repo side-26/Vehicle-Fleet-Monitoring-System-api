@@ -1,5 +1,0 @@
-# Logger Infrastructure
-
-This folder is reserved for runtime-facing logging infrastructure integrations. Logger configuration, including Pino options and the Pino HTTP middleware, lives in `src/configs/logger.config.ts`.
-
-Update this guide when files or responsibilities in this folder change.
