@@ -1,7 +1,7 @@
 import type { ErrorRequestHandler } from 'express';
 
-import type { ErrorResponse } from '#/_types';
-import { STATUS_CODES } from '#/configs/constants';
+import type { ErrorResponse } from '#src/_types';
+import { STATUS_CODES } from '#src/configs/constants';
 
 const isErrorResponseData = (value: unknown): value is ErrorResponse['data'] => {
   if (typeof value !== 'object' || value === null || !('details' in value)) {

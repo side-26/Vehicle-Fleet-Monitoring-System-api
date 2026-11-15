@@ -1,7 +1,7 @@
 import type { Response } from 'express';
 
-import type { ErrorResponse, SuccessResponse } from '#/_types';
-import { STATUS_CODES } from '#/configs/constants';
+import type { ErrorResponse, SuccessResponse } from '#src/_types';
+import { STATUS_CODES } from '#src/configs/constants';
 
 export const setErrorResponse = (
   statusCode: number = STATUS_CODES.INTERNAL_SERVER_ERROR,

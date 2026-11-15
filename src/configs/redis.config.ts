@@ -1,12 +1,12 @@
 import { createClient } from 'redis';
 
-import { env } from '#/configs/env.config';
-import { logger } from '#/configs/logger.config';
+import { env } from '#src/configs/env.config';
+import { appLogger } from '#src/configs/logger.config';
 
 export const redisClient = createClient({ url: env.REDIS_URL });
 
 redisClient.on('error', (error: Error) => {
-  logger.error({ err: error }, 'Redis client error');
+  appLogger.error('Redis client error', error);
 });
 
 export const connectRedis = async (): Promise<void> => {
@@ -15,6 +15,7 @@ export const connectRedis = async (): Promise<void> => {
   }
 
   await redisClient.connect();
+  appLogger.success('Redis connected successfully');
 };
 
 export const disconnectRedis = async (): Promise<void> => {

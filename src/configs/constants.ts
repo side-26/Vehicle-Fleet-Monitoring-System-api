@@ -60,3 +60,7 @@ export const STATUS_CODES = {
 } as const;
 
 export const HTTP_METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS', 'HEAD'] as const;
+
+export const SERVER_LIFECYCLE = {
+  SHUTDOWN_TIMEOUT_MS: 10_000,
+} as const;

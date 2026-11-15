@@ -8,7 +8,7 @@
   "type": "module",
   "main": "src/server.ts",
   "imports": {
-    "#/*": {
+    "#src/*": {
       "development": "./src/*.ts",
       "default": "./dist/*.js"
     }
@@ -22,7 +22,7 @@
     "check:lint": "oxlint",
     "check:types": "tsc --noEmit",
     "check:unused": "knip",
-    "dev": "tsx --conditions=development watch src/server.ts",
+    "dev": "tsx watch --conditions=development src/server.ts",
     "fix": "pnpm fix:lint && pnpm fix:format",
     "fix:format": "oxfmt",
     "fix:lint": "oxlint --fix",

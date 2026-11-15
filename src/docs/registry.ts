@@ -1,1 +1,1 @@
-/* oxlint-disable unicorn/no-empty-file */
+export { openApiDocument } from './openapi.js';

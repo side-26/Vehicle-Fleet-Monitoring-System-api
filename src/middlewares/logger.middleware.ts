@@ -1,3 +1,3 @@
-import { httpLogger } from '#/configs/logger.config';
+import { httpLogger } from '#src/configs/logger.config';
 
 export const loggerMiddleware = httpLogger;

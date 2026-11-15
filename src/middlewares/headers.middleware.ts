@@ -3,8 +3,8 @@ import helmet from 'helmet';
 
 import type { RequestHandler } from 'express';
 
-import { HTTP_METHODS } from '#/configs/constants';
-import { env } from '#/configs/env.config';
+import { HTTP_METHODS } from '#src/configs/constants';
+import { env } from '#src/configs/env.config';
 
 const allowedOrigins = ['http://localhost:3000'] as const;
 

@@ -1,7 +1,7 @@
 import { rateLimit } from 'express-rate-limit';
 
-import type { ErrorResponse } from '#/_types';
-import { STATUS_CODES } from '#/configs/constants';
+import type { ErrorResponse } from '#src/_types';
+import { STATUS_CODES } from '#src/configs/constants';
 
 export const rateLimiterMiddleware = rateLimit({
   windowMs: 15 * 60 * 1000,

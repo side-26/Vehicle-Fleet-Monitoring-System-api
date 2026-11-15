@@ -42,6 +42,17 @@ any omitted layer when it matters to the requested feature.
 
 ## Module implementation steps
 
+### Routes and tests
+
+- Prefix module endpoint paths with the module's plural kebab-case name, such as
+  `/health-checks/live` or `/users/all`.
+- Mount routers in `src/app.ts` under `/api`, such as `app.use('/api', healthChecksRouter)`. The
+  resulting health endpoint is `/api/health-checks/live`.
+- Keep unit and integration tests in the related module folder.
+- Use `STATUS_CODES` constants in tests instead of numeric HTTP status literals.
+- Send every success response through `setSuccessResponse` and raise every application error through
+  `setErrorResponse`; do not write response bodies directly with `response.status(...).json(...)`.
+
 1. Read the module's `.Agents` guide and inspect related modules, shared middleware, configuration,
    infrastructure, utilities, and global types.
 2. Map the requested API flow and business behavior. Identify request inputs, response outputs,

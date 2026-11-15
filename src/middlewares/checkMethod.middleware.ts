@@ -1,7 +1,7 @@
 import type { RequestHandler } from 'express';
 
-import { HTTP_METHODS, STATUS_CODES } from '#/configs/constants';
-import { setErrorResponse } from '#/utils/helpers';
+import { HTTP_METHODS, STATUS_CODES } from '#src/configs/constants';
+import { setErrorResponse } from '#src/utils/helpers';
 
 export type SupportedMethod = (typeof HTTP_METHODS)[number];
 

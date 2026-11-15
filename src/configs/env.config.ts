@@ -1,6 +1,9 @@
 import dotenv from 'dotenv';
 
-dotenv.config();
+const nodeEnvironment = process.env.NODE_ENV ?? 'development';
+const envFilePath = nodeEnvironment === 'production' ? '.env.production' : '.env.local';
+
+dotenv.config({ path: envFilePath });
 
 const getRequiredEnv = (key: string): string => {
   const value = process.env[key];
@@ -13,7 +16,7 @@ const getRequiredEnv = (key: string): string => {
 };
 
 export const env = {
-  NODE_ENV: process.env.NODE_ENV ?? 'development',
+  NODE_ENV: nodeEnvironment,
   PORT: Number(process.env.PORT ?? 3000),
   MONGODB_URI: getRequiredEnv('MONGODB_URI'),
   REDIS_URL: getRequiredEnv('REDIS_URL'),

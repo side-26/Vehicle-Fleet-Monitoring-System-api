@@ -5,4 +5,6 @@ This folder contains application infrastructure integrations and runtime-facing 
 - `logger/` is reserved for logging infrastructure integrations; logger setup lives in `src/configs/logger.config.ts`.
 - `redis/` is reserved for Redis infrastructure integration code.
 
+- `src/server.lifecycle.ts` manages HTTP server startup and graceful shutdown.
+
 Update this guide when integrations or responsibilities in this folder change.
