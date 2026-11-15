@@ -1,7 +1,6 @@
 {
   "$schema": "https://unpkg.com/knip/schema.json",
   "project": ["src/**/*.ts"],
-  "ignoreFiles": ["src/app.ts"],
   "rules": {
     "dependencies": "warn",
     "devDependencies": "warn",
