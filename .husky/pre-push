@@ -1,4 +1,5 @@
-pnpm format:check
-pnpm lint --deny-warnings
-pnpm typecheck
-pnpm test
+pnpm run check:format
+pnpm run check:lint
+pnpm run check:types
+pnpm run check:unused
+pnpm run check:duplicates
