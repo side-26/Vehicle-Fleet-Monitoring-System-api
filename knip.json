@@ -1,5 +1,6 @@
 {
   "$schema": "https://unpkg.com/knip/schema.json",
   "entry": ["src/server.ts"],
-  "project": ["src/**/*.ts"]
+  "project": ["src/**/*.ts"],
+  "ignoreFiles": ["src/app.ts", "src/app.ts"]
 }
