@@ -17,7 +17,14 @@ const repository = client
 
 beforeAll(async () => {
   if (!client || !testUrl) return;
-  if (new URL(testUrl).pathname === '/' || testUrl === env.REDIS_URL)
+  const testRedis = new URL(testUrl);
+  const applicationRedis = new URL(env.REDIS_URL);
+  if (
+    env.NODE_ENV === 'production' ||
+    testRedis.pathname === '/' ||
+    (testRedis.origin === applicationRedis.origin &&
+      testRedis.pathname === applicationRedis.pathname)
+  )
     throw new Error('REDIS_TEST_URL must target a dedicated Redis database');
   await client.connect();
 });
