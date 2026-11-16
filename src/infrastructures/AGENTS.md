@@ -5,7 +5,8 @@ external services and shared infrastructure, such as Redis.
 
 - `logger/` is reserved for logging infrastructure integrations; logger setup lives in
   `src/configs/logger.config.ts`.
-- `redis/` is reserved for Redis infrastructure integration code.
+- `redis/` contains typed Redis key factories and administrator session persistence with atomic Lua
+  operations.
 
 - `src/server.lifecycle.ts` manages HTTP server startup and graceful shutdown.
 
