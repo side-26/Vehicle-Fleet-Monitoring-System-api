@@ -1,7 +1,11 @@
 import { Router } from 'express';
 
-import { liveController, readyController, startupController } from './healthChecks.controllers.js';
-import { healthCheckPaths } from './healthChecks.paths.js';
+import {
+  liveController,
+  readyController,
+  startupController,
+} from '#src/modules/healthChecks/healthChecks.controllers';
+import { healthCheckPaths } from '#src/modules/healthChecks/healthChecks.paths';
 
 export const healthChecksRouter = Router();
 

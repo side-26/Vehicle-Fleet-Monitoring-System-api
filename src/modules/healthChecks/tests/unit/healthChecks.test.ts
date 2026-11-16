@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import { healthStatuses } from '../../healthChecks.types.js';
-import { healthCheckResponseSchema } from '../../healthChecks.validations.js';
+import { healthStatuses } from '#src/modules/healthChecks/healthChecks.types';
+import { healthCheckResponseSchema } from '#src/modules/healthChecks/healthChecks.validations';
 
 describe('health check contracts', () => {
   it('accepts healthy response', () => {

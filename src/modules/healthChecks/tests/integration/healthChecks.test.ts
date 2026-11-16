@@ -1,9 +1,8 @@
 import request from 'supertest';
 import { describe, expect, it } from 'vitest';
 
+import { app } from '#src/app';
 import { STATUS_CODES } from '#src/configs/constants';
-
-import { app } from '../../../../app.js';
 
 describe('health check endpoints', () => {
   it('reports liveness', async () => {

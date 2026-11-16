@@ -9,7 +9,22 @@
   "rules": {
     "typescript/no-explicit-any": "error",
     "no-debugger": "error",
-    "no-console": "warn"
+    "no-console": "warn",
+    "eslint/no-restricted-imports": [
+      "error",
+      {
+        "patterns": [
+          {
+            "regex": "^\\.\\./",
+            "message": "Parent imports are forbidden. Use the #/ alias instead."
+          },
+          {
+            "regex": "^(\\./|\\.\\./|#).*\\.(js|mjs|cjs)$",
+            "message": "Use TypeScript extensions (.ts or .mts) instead of JavaScript extensions."
+          }
+        ]
+      }
+    ]
   },
   "ignorePatterns": ["dist/**", "coverage/**", "node_modules/**"]
 }

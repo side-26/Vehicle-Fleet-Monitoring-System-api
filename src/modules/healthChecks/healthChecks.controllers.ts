@@ -1,11 +1,9 @@
 import type { RequestHandler } from 'express';
 
 import { STATUS_CODES } from '#src/configs/constants';
+import { getReadiness, isStartupComplete } from '#src/modules/healthChecks/healthChecks.service';
+import type { HealthCheckResponse } from '#src/modules/healthChecks/healthChecks.types';
 import { setErrorResponse, setSuccessResponse } from '#src/utils/helpers';
-
-import { getReadiness, isStartupComplete } from './healthChecks.service.js';
-
-import type { HealthCheckResponse } from './healthChecks.types.js';
 
 export const liveController: RequestHandler = (_request, response) => {
   const body: HealthCheckResponse = { status: 'healthy' };

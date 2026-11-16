@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { healthStatuses } from './healthChecks.types.js';
+import { healthStatuses } from '#src/modules/healthChecks/healthChecks.types';
 
 const healthStatusSchema = z.enum(healthStatuses);
 export const healthCheckResponseSchema = z.object({
