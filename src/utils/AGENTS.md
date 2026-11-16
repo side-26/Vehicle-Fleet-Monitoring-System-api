@@ -1,6 +1,7 @@
 # Shared Utilities
 
-This folder contains utilities shared across application modules, such as helpers for consistent API responses and common operations.
+This folder contains utilities shared across application modules, such as helpers for consistent API
+responses and common operations.
 
 - `helpers.ts` provides typed error and success response helpers for Express API flows.
 - `lifecycle.helpers.ts` starts and closes shared services such as MongoDB and Redis.
